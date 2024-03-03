@@ -1,0 +1,39 @@
+.hat {
+  background-color: LightGrey;
+  margin-bottom: 20px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  position: relative;
+  /* height: 22px;
+  max-width: 400px; */
+  width: 260px;
+}
+
+.input {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid DimGrey;
+}
+
+.input:hover,
+.input:focus {
+  outline: DimGrey;
+  border-color: DimGrey;
+}
+
+.btn {
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+}
+
+.btn:hover {
+  color: black;
+}
