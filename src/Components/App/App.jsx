@@ -46,7 +46,7 @@ function App() {
   function handleQuery(curQuery) {
     setQuery(curQuery);
     setPage(1);
-    setTotalPages(0);
+    setTotalPages(0); // reset total pages
     setPhotos([]);
     setError(null);
   }
@@ -67,9 +67,11 @@ function App() {
         {photos.length > 0 && !error && (
           <ImageGallery photos={photos} onSelect={handleModal} />
         )}
-        {totalPages > page && !isFetch && !error && (
-          <LoadMoreBtn onClick={handleLoadMore}>Load More</LoadMoreBtn>
-        )}
+        {totalPages > page && // if current pages is equals totalPages (took from API in line 32) then button 'Load More' is not rendered
+          !isFetch &&
+          !error && (
+            <LoadMoreBtn onClick={handleLoadMore}>Load More</LoadMoreBtn>
+          )}
         {error && (
           <ErrorMessage>
             Something went wrong, because {error}. Please, try again later.
