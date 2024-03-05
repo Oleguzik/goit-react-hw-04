@@ -1,4 +1,4 @@
-import ImageCard from "./ImageCard";
+import ImageCard from "../ImageCard/ImageCard";
 import css from "./ImageGallery.module.css";
 
 function ImageGallery({ photos, onSelect }) {
@@ -11,6 +11,5 @@ function ImageGallery({ photos, onSelect }) {
       ))}
     </ul>
   );
-  // console.log(photos);
 }
 export default ImageGallery;

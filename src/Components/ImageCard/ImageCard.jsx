@@ -1,4 +1,4 @@
-import css from "./ImageGallery.module.css";
+import css from "./ImageCard.module.css";
 
 function ImageCard({ card, onSelect }) {
   return (
@@ -8,6 +8,8 @@ function ImageCard({ card, onSelect }) {
         onSelect(true, {
           src: card.urls.regular,
           description: card.alt_description,
+          alt_description: card.alt_description,
+          location: card.user.location,
         })
       }
     >

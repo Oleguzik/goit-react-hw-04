@@ -14,9 +14,12 @@ function ImageModal({ isOpen = false, photo, onChange }) {
       className={css.modal}
       overlayClassName={`${css.cover} ${isOpen ? css.coverOpen : ""}`}
     >
-      <img src={photo.src} className={css.img} />
+      <img src={photo.src} className={css.img} alt={photo.alt_description} />
       {/* <p className={css.info}>{photo.user.location}</p> */}
-      <p className={css.info}>{photo.description}</p>
+      <p className={css.info}>
+        Description: {photo.description}, <br />
+        Location: {photo.location}
+      </p>
     </ReactModal>
   );
 }

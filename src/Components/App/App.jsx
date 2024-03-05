@@ -17,8 +17,10 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [error, setError] = useState(null);
   const [modalPhoto, setModalPhoto] = useState({
+    alt_description: "",
     src: "",
     description: "",
+    location: "",
   });
 
   useEffect(() => {
